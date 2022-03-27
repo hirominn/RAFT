@@ -1,8 +1,9 @@
 import sys
-sys.path.append('core')
+# sys.path.append('core')
 
 import argparse
 import os
+sys.path.insert(1, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'core'))
 import cv2
 import glob
 import numpy as np
