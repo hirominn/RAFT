@@ -63,7 +63,7 @@ def demo(args, model, image1, image2):
         image1, image2 = padder.pad(image1, image2)
 
         start = time.perf_counter()
-        flow_low, flow_up = model(image1, image2, iters=20, test_mode=True)           
+        flow_low, flow_up = model(image1, image2, iters=15, test_mode=True)           
         stop = time.perf_counter()
         print("prediction:", (stop - start) * 1000, "ms")
         # viz(image1, flow_up, imfile1[12:-4], imfile2[12:-4])
